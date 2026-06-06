@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contextual AI Manual Reader</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="sidebar-title">📁 Knowledge Base</h2>
+            <p class="sidebar-desc">Upload your technical manual (PDF/TXT) to begin.</p>
+            
+            <div class="upload-zone" id="upload-zone">
+                <input type="file" id="file-input" accept=".pdf,.txt" hidden>
+                <div class="upload-content">
+                    <span class="upload-icon">📄</span>
+                    <span id="upload-text">Drag & Drop or Click</span>
+                </div>
+            </div>
+
+            <div class="status-box" id="status-box">
+                <h3>⚙️ System Status</h3>
+                <div class="status-indicator error" id="status-indicator">
+                    Model Status: Awaiting Document
+                </div>
+            </div>
+            
+            <div id="active-doc" class="active-doc hidden">
+                ✨ Active: <strong id="doc-name"></strong>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <h1 class="title-gradient">Contextual AI Manual Reader 🧠</h1>
+                <p class="subtitle">Experience lightning-fast localized semantic search with seamless cloud fallback.</p>
+            </header>
+
+            <div class="chat-container" id="chat-container">
+                <!-- Chat messages will be injected here -->
+            </div>
+
+            <div class="input-container">
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Ask a question about your document..." autocomplete="off" disabled>
+                    <button type="submit" id="send-btn" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
