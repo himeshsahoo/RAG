@@ -38,7 +38,7 @@ Initially built as a Streamlit application, it has been completely rewritten to 
 
 3. Setup your environment variables:
    - Create a `.env` file in the root directory.
-   - Add your Gemini key:
+   - Add your Gemini key
      ```env
      GEMINI_API_KEY=your_api_key_here
      ```
